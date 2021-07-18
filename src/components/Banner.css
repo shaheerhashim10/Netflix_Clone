@@ -23,7 +23,9 @@
     /* padding-top: 1rem; */
     font-size: 0.8rem;
     max-width: 360px;
-    height: 25px;
+    height: 30px;
+    color: white;
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
 }
 
 .banner--fadeBottom {
@@ -37,6 +39,7 @@
 }
 .banner_buttons {
     margin-top: 30px;
+    display: flex; 
 }
 .banner_button {
     cursor: pointer;
@@ -51,10 +54,47 @@
     padding-top: 0.5rem;
     background-color: rgba(51,  51, 51, 0.5);
     padding-bottom: 0.5rem;
+    font-size: 14px;
 }
 
 .banner_button:hover {
     color: #000;
     background-color: #e6e6e6;
     transition: all 0.2s;
+}
+
+.btn_title {
+    font-size: 35px;
+    font-weight: 500;
+    
+}
+
+.banner_button > .MuiSvgIcon-root {
+    margin-right: 5px !important;
+    font-size: 30px;
+}
+
+.thumbIcon {
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid white;
+    padding: 10px;
+    margin-left: 5px;
+}
+
+.thumbIcon > .MuiSvgIcon-root {
+    color: white;
+}
+
+.rating {
+    padding: 10px;
+    font-size: 20px;
+}
+.green {
+    color: green;
+    font-weight: 700;
+}
+.border {
+    border: 1px solid white;
+    padding: 3px;
 }
