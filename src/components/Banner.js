@@ -35,6 +35,7 @@ function Banner() {
     function truncate(string, n) {
         return string?.length > n ? string.substr(0, n - 1) + '...' : string;
     }
+    
     function getYear(string) {
         if (string) {
             let dateArray = string.split("-");
@@ -47,7 +48,6 @@ function Banner() {
         <header className="banner" style={{
             backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
             backgroundSize: "cover",
-            // backgroundPosition: "center center",
         }}>
             <div className="banner_contents">
                 <h1 className="banner_title">
@@ -69,17 +69,14 @@ function Banner() {
                         <AddIcon />
                         <span className="btn_title">My List</span>
                     </button>
-
                     <button className="thumbIcon">
                         <ThumbUpAltOutlinedIcon />
                     </button>
                     <button className="thumbIcon">
                         <ThumbDownAltOutlinedIcon />
                     </button>
-
                 </div>
             </div>
-
             <div className="banner--fadeBottom" />
 
         </header>
