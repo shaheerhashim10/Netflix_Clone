@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Nav.css';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import SearchIcon from '@material-ui/icons/Search';
 
 function Nav() {
     const [show, handleShow] = useState(false);
@@ -32,14 +33,14 @@ function Nav() {
                 </ul>
 
                 <div className="op12">
-                <ul className="nav-right-side">
-                    <input type="search" name="" id="" />
-                    <li>Children</li>
-                    <li>TV Shows</li>
-                    <li><NotificationsIcon /></li>
-                </ul>
-                <img className="nav_avatar" src="https://i.ibb.co/2PJGPrT/Netflix-avatar.png" alt="Avatar" />
-                <ArrowDropDownIcon />
+                    <ul className="nav-right-side">
+                        <SearchIcon className="searchIconStyle" />
+                        <li>Children</li>
+                        <li>TV Shows</li>
+                        <li><NotificationsIcon /></li>
+                    </ul>
+                    <img className="nav_avatar" src="https://i.ibb.co/2PJGPrT/Netflix-avatar.png" alt="Avatar" />
+                    <ArrowDropDownIcon />
                 </div>
 
             </div>

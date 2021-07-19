@@ -77,3 +77,8 @@ ul > li {
     display:flex; 
     align-items: flex-end;
 }
+
+.searchIconStyle {
+    vertical-align: middle;
+    margin-right: 5px;
+}
