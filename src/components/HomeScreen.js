@@ -1,6 +1,6 @@
 import React from 'react';
 import Banner from './Banner';
-import "./HomeScreen.css";
+import "../styles/HomeScreen.css";
 import Nav from './Nav';
 import requests from '../api/Requests';
 import Row from './Row';

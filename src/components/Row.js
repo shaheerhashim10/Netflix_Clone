@@ -1,6 +1,6 @@
 import axios from '../api/axios';
 import React, { useEffect, useState } from 'react'
-import './Row.css';
+import '../styles/Row.css';
 import { useDispatch } from 'react-redux';
 import { enterMovie } from '../features/appSlice';
 

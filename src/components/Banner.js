@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './Banner.css';
+import '../styles/Banner.css';
 import axios from '../api/axios';
 import requests from '../api/Requests';
 import { useSelector } from 'react-redux';
