@@ -13,13 +13,12 @@ function Banner() {
     let [movie, setMovie] = useState([]);
     const movieSelected = useSelector(selectMovieData);
 
-    //only fires when banner component mounts
     useEffect(() => {
         async function fetchData() {
-            const request = await axios.get(requests.fetchNetflixOriginals);
+            const request = await axios.get(requests.fetchMartialArtsAction);
             setMovie(
-                request.data.results[
-                Math.floor(Math.random() * request.data.results.length - 1)
+                request.data[
+                Math.floor(Math.random() * request.data.length - 1)
                 ]
             );
             return request;
@@ -27,7 +26,6 @@ function Banner() {
         fetchData();
     }, []);
 
-    console.log(movie);
     movie = movieSelected ?? movie;
 
     let year = getYear(movie?.first_air_date);
@@ -35,7 +33,7 @@ function Banner() {
     function truncate(string, n) {
         return string?.length > n ? string.substr(0, n - 1) + '...' : string;
     }
-    
+
     function getYear(string) {
         if (string) {
             let dateArray = string.split("-");
@@ -46,25 +44,24 @@ function Banner() {
 
     return (
         <header className="banner" style={{
-            backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+            backgroundImage: `url("https://image.tmdb.org/t/p/original//iq5L971DFW1SwLJdvl7OpPI1QeZ.jpg")`,
             backgroundSize: "cover",
         }}>
             <div className="banner_contents">
                 <h1 className="banner_title">
-                    {movie?.title || movie?.name || movie?.original_name}
+                    {movie?.name}
                 </h1>
                 <div className="rating">
                     <span className="green">90% Match</span> <strong>{year}</strong> <span className="border">TVMA</span> <strong>8 Seasons</strong>
                 </div>
                 <h1 className="banner_description">
-                    {truncate(movie?.overview, 150)}
+                    {truncate(movie?.description, 150)}
                 </h1>
                 <div className="banner_buttons">
                     <button className="banner_button">
                         <PlayArrowIcon />
                         <span className="btn_title">Play</span>
                     </button>
-
                     <button className="banner_button">
                         <AddIcon />
                         <span className="btn_title">My List</span>
@@ -78,7 +75,6 @@ function Banner() {
                 </div>
             </div>
             <div className="banner--fadeBottom" />
-
         </header>
     )
 }
